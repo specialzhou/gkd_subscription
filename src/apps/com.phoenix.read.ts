@@ -1,0 +1,174 @@
+import { defineGkdApp } from '@gkd-kit/define';
+
+export default defineGkdApp({
+  id: 'com.phoenix.read',
+  name: '红果短剧',
+  groups: [
+    {
+      key: 0,
+      name: '开屏广告',
+      desc: '点击跳过开屏广告',
+      rules: [
+        {
+          key: 0,
+          name: '开屏广告跳过按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.SplashActivity',
+            'com.phoenix.read.ui.activity.MainActivity',
+          ],
+          matches: [
+            '[text*="跳过"][text.length<=10]',
+            '[text*="skip"][text.length<=10]',
+            '[text*="Skip"][text.length<=10]',
+            '[id*="skip"][visibleToUser=true]',
+            '[id*="Skip"][visibleToUser=true]',
+            '[desc*="跳过"][desc.length<=10]',
+            '[desc*="skip"][desc.length<=10]',
+            '[desc*="Skip"][desc.length<=10]',
+          ],
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
+      key: 1,
+      name: '视频流广告',
+      desc: '跳过视频流中插播的广告',
+      rules: [
+        {
+          key: 0,
+          name: '视频流广告关闭按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.MainActivity',
+            'com.phoenix.read.ui.activity.VideoActivity',
+          ],
+          matches: [
+            '[text*="关闭广告"]',
+            '[text*="关闭"]',
+            '[id*="close"][visibleToUser=true]',
+            '[id*="Close"][visibleToUser=true]',
+            '[desc*="关闭广告"]',
+            '[desc*="关闭"]',
+          ],
+          snapshotUrls: [],
+        },
+        {
+          key: 1,
+          name: '广告跳过按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.MainActivity',
+            'com.phoenix.read.ui.activity.VideoActivity',
+          ],
+          matches: [
+            '[text*="跳过广告"]',
+            '[text*="跳过"]',
+            '[id*="skip_ad"][visibleToUser=true]',
+            '[id*="skipAd"][visibleToUser=true]',
+            '[desc*="跳过广告"]',
+            '[desc*="跳过"]',
+          ],
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '弹窗广告',
+      desc: '关闭弹窗广告',
+      rules: [
+        {
+          key: 0,
+          name: '弹窗广告关闭按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.MainActivity',
+            'com.phoenix.read.ui.activity.TransparentActivity',
+          ],
+          matches: [
+            '[text*="关闭"]',
+            '[id*="close"][visibleToUser=true]',
+            '[id*="Close"][visibleToUser=true]',
+            '[id*="dismiss"][visibleToUser=true]',
+            '[id*="Dismiss"][visibleToUser=true]',
+            '[desc*="关闭"]',
+          ],
+          snapshotUrls: [],
+        },
+        {
+          key: 1,
+          name: '弹窗广告取消按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.MainActivity',
+            'com.phoenix.read.ui.activity.TransparentActivity',
+          ],
+          matches: [
+            '[text*="取消"]',
+            '[text*="稍后再说"]',
+            '[text*="以后再说"]',
+            '[text*="暂不"]',
+            '[id*="cancel"][visibleToUser=true]',
+            '[id*="Cancel"][visibleToUser=true]',
+            '[desc*="取消"]',
+            '[desc*="稍后再说"]',
+            '[desc*="以后再说"]',
+            '[desc*="暂不"]',
+          ],
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '会员推广弹窗',
+      desc: '关闭会员推广弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '会员推广关闭按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.MainActivity',
+            'com.phoenix.read.ui.activity.VIPActivity',
+          ],
+          matches: [
+            '[text*="关闭"]',
+            '[text*="×"]',
+            '[text*="X"]',
+            '[id*="close"][visibleToUser=true]',
+            '[id*="Close"][visibleToUser=true]',
+            '[desc*="关闭"]',
+            '[desc*="×"]',
+            '[desc*="X"]',
+          ],
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '更新弹窗',
+      desc: '关闭应用更新弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '更新弹窗取消按钮',
+          activityIds: [
+            'com.phoenix.read.ui.activity.MainActivity',
+            'com.phoenix.read.ui.activity.UpdateActivity',
+          ],
+          matches: [
+            '[text*="取消"]',
+            '[text*="以后再说"]',
+            '[text*="暂不更新"]',
+            '[text*="稍后再说"]',
+            '[id*="cancel"][visibleToUser=true]',
+            '[id*="Cancel"][visibleToUser=true]',
+            '[desc*="取消"]',
+            '[desc*="以后再说"]',
+            '[desc*="暂不更新"]',
+            '[desc*="稍后再说"]',
+          ],
+          snapshotUrls: [],
+        },
+      ],
+    },
+  ],
+});

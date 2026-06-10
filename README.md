@@ -1,4 +1,54 @@
-# subscription-template
+# 红果短剧广告跳过订阅
+
+这是一个专门为红果短剧应用设计的GKD订阅规则，用于自动跳过各种广告。
+
+## 功能特性
+
+- 跳过开屏广告
+- 跳过视频流中插播的广告
+- 关闭弹窗广告
+- 关闭会员推广弹窗
+- 关闭更新弹窗
+
+## 应用信息
+
+- 应用名称：红果短剧
+- 应用包名：com.phoenix.read
+- 订阅ID：123456789
+
+## 使用方法
+
+1. 在GKD中添加订阅链接：
+   ```
+   https://raw.githubusercontent.com/specialzhou/gkd_subscription/main/dist/gkd.json5
+   ```
+
+2. 如果无法访问GitHub，可以使用镜像加速：
+   ```
+   https://fastly.jsdelivr.net/gh/specialzhou/gkd_subscription@main/dist/gkd.json5
+   ```
+
+## 规则说明
+
+### 开屏广告
+- 自动点击跳过按钮
+- 支持多种跳过按钮样式
+
+### 视频流广告
+- 自动关闭视频流中的广告
+- 支持跳过广告按钮
+
+### 弹窗广告
+- 自动关闭各种弹窗广告
+- 支持取消按钮
+
+### 会员推广弹窗
+- 自动关闭会员推广弹窗
+
+### 更新弹窗
+- 自动关闭应用更新弹窗
+
+## 自定义订阅
 
 GKD 订阅模板, 此仓库方便您直接构建自己订阅, 点击右上角 [Use this template](https://github.com/new?template_name=subscription-template&template_owner=gkd-kit) 即可使用
 
