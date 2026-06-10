@@ -11,7 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '上滑跳过广告',
+          name: '上滑跳过广告-ana',
           activityIds: [
             'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
             'com.phoenix.read.ui.activity.MainActivity',
@@ -34,8 +34,35 @@ export default defineGkdApp({
             },
             duration: 300,
           },
-          matches:
-            '[vid="ana"][visibleToUser=true], [vid="alm"][visibleToUser=true]',
+          matches: '[vid="ana"][visibleToUser=true]',
+          snapshotUrls: [],
+        },
+        {
+          key: 1,
+          name: '上滑跳过广告-alm',
+          activityIds: [
+            'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
+            'com.phoenix.read.ui.activity.MainActivity',
+          ],
+          fastQuery: true,
+          matchRoot: true,
+          matchTime: 10000,
+          resetMatch: 'activity',
+          actionCd: 8000,
+          actionDelay: 1500,
+          action: 'swipe',
+          swipeArg: {
+            start: {
+              x: 720,
+              y: 2400,
+            },
+            end: {
+              x: 720,
+              y: 800,
+            },
+            duration: 300,
+          },
+          matches: '[vid="alm"][visibleToUser=true]',
           snapshotUrls: [],
         },
       ],
