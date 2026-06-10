@@ -22,12 +22,12 @@ export default defineGkdApp({
           action: 'swipe',
           swipeArg: {
             start: {
-              x: 'width * 0.5',
-              y: 'height * 0.7',
+              x: 720,
+              y: 2200,
             },
             end: {
-              x: 'width * 0.5',
-              y: 'height * 0.3',
+              x: 720,
+              y: 950,
             },
             duration: 500,
           },
