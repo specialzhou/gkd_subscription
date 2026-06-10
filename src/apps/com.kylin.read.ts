@@ -17,6 +17,8 @@ export default defineGkdApp({
           ],
           fastQuery: true,
           matchRoot: true,
+          matchTime: 10000,
+          resetMatch: 'activity',
           actionCd: 5000,
           actionDelay: 2000,
           action: 'swipe',
