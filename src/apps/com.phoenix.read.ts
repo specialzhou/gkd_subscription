@@ -11,17 +11,17 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '上滑跳过广告-ana',
+          name: '上滑跳过-普通广告(ana)',
           activityIds: [
             'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
             'com.phoenix.read.ui.activity.MainActivity',
           ],
           fastQuery: true,
           matchRoot: true,
-          matchTime: 10000,
+          matchTime: 15000,
           resetMatch: 'activity',
-          actionCd: 8000,
-          actionDelay: 1500,
+          actionCd: 10000,
+          actionDelay: 1000,
           action: 'swipe',
           swipeArg: {
             start: {
@@ -39,17 +39,17 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          name: '上滑跳过广告-alm',
+          name: '上滑跳过-直播广告(alm)正常状态',
           activityIds: [
             'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
             'com.phoenix.read.ui.activity.MainActivity',
           ],
           fastQuery: true,
           matchRoot: true,
-          matchTime: 10000,
+          matchTime: 15000,
           resetMatch: 'activity',
-          actionCd: 8000,
-          actionDelay: 1500,
+          actionCd: 10000,
+          actionDelay: 1000,
           action: 'swipe',
           swipeArg: {
             start: {
@@ -62,7 +62,35 @@ export default defineGkdApp({
             },
             duration: 300,
           },
-          matches: '[vid="alm"][visibleToUser=true]',
+          matches: '[vid="alm"][text="上滑继续观看短剧"][visibleToUser=true]',
+          snapshotUrls: [],
+        },
+        {
+          key: 2,
+          name: '上滑跳过-直播广告(alm)倒计时状态',
+          activityIds: [
+            'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
+            'com.phoenix.read.ui.activity.MainActivity',
+          ],
+          fastQuery: true,
+          matchRoot: true,
+          matchTime: 15000,
+          resetMatch: 'activity',
+          actionCd: 15000,
+          actionDelay: 7000,
+          action: 'swipe',
+          swipeArg: {
+            start: {
+              x: 720,
+              y: 2400,
+            },
+            end: {
+              x: 720,
+              y: 800,
+            },
+            duration: 300,
+          },
+          matches: '[vid="alm"][text*="后可继续上滑观看"][visibleToUser=true]',
           snapshotUrls: [],
         },
       ],
