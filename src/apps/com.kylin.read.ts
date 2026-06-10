@@ -33,7 +33,8 @@ export default defineGkdApp({
             },
             duration: 300,
           },
-          matches: '[vid="alm"][visibleToUser=true]',
+          matches:
+            '[vid="ana"][visibleToUser=true], [vid="alm"][visibleToUser=true]',
           snapshotUrls: [],
         },
       ],
