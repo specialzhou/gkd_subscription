@@ -6,8 +6,8 @@ export default defineGkdApp({
   groups: [
     {
       key: 0,
-      name: '视频流广告-上滑跳过',
-      desc: '检测到上滑提示后，执行上滑手势跳过广告',
+      name: '普通广告-上滑跳过(ana)',
+      desc: '检测到普通视频广告上滑提示后，执行上滑手势跳过广告',
       rules: [
         {
           key: 0,
@@ -37,6 +37,13 @@ export default defineGkdApp({
           matches: '[vid="ana"][visibleToUser=true]',
           snapshotUrls: [],
         },
+      ],
+    },
+    {
+      key: 1,
+      name: '直播广告-正常态-上滑跳过(alm)',
+      desc: '检测到直播广告上滑提示后，执行上滑手势跳过广告',
+      rules: [
         {
           key: 1,
           name: '上滑跳过-直播广告(alm)正常状态',
@@ -65,6 +72,13 @@ export default defineGkdApp({
           matches: '[vid="alm"][text="上滑继续观看短剧"][visibleToUser=true]',
           snapshotUrls: [],
         },
+      ],
+    },
+    {
+      key: 2,
+      name: '直播广告-倒计时态-上滑跳过(alm)',
+      desc: '检测到直播广告倒计时上滑提示后，等待倒计时结束上滑跳过广告',
+      rules: [
         {
           key: 2,
           name: '上滑跳过-直播广告(alm)倒计时状态',

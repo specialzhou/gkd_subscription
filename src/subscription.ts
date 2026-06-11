@@ -6,7 +6,7 @@ import globalGroups from './globalGroups';
 export default defineGkdSubscription({
   id: 123456789,
   name: '红果短剧广告跳过订阅',
-  version: 1,
+  version: 15,
   author: 'MiMo',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/specialzhou/gkd_subscription',
